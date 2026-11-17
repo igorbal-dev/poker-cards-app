@@ -21,6 +21,7 @@
   <header class="topbar">
     <div class="topbar-title" id="viewTitle">Карточки</div>
     <div class="topbar-right" id="topRight"></div>
+    <button class="fs-enter" id="fsBtn" aria-label="Полный экран" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
   </header>
 
   <main id="main">
@@ -28,6 +29,10 @@
     <section class="view" id="view-cards" hidden>
       <div class="stage" id="stage">
         <div class="card-frame" id="cardFrame"></div>
+      </div>
+      <div class="fs-ui dim" id="fsUi">
+        <div class="fs-chip" id="fsChip"></div>
+        <button class="fs-exit" id="fsExit" aria-label="Выйти из полного экрана"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
       </div>
       <div class="controls">
         <button class="btn icon" id="prevBtn" aria-label="Предыдущая">‹</button>

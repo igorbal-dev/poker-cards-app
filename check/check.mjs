@@ -81,6 +81,25 @@ ok('кнопка › работает', (await counter()) === '2 / 12');
 await page.click('#prevBtn'); await page.waitForTimeout(600);
 ok('кнопка ‹ работает', (await counter()) === '1 / 12');
 
+// Полноэкранный режим
+await go('cards/06');
+await page.click('#fsBtn'); await page.waitForTimeout(500);
+const fsInfo = await page.evaluate(() => {
+  const fr = document.querySelector('#cardFrame').getBoundingClientRect();
+  const hiddenUi = ['.topbar', '.controls', '.tabbar'].every((s) => getComputedStyle(document.querySelector(s)).display === 'none');
+  return { hiddenUi, w: fr.width, h: fr.height, top: fr.top, bottom: fr.bottom, vw: innerWidth, vh: innerHeight };
+});
+ok('полный экран: меню и кнопки скрыты, карточка во всю ширину', fsInfo.hiddenUi && fsInfo.w >= fsInfo.vw - 1 - 0.5 * 0 && fsInfo.top >= -0.5 && fsInfo.bottom <= fsInfo.vh + 0.5, JSON.stringify(fsInfo));
+await shot(page, '07_fullscreen.png');
+await swipe(320, 60);
+ok('полный экран: свайп влево → 07', (await page.textContent('#fsChip')) === '7 / 12', await page.textContent('#fsChip'));
+await swipe(60, 320);
+ok('полный экран: свайп вправо → 06', (await page.textContent('#fsChip')) === '6 / 12');
+await page.click('#fsExit', { force: true }).catch(() => {});
+await page.waitForTimeout(300);
+if (await page.evaluate(() => document.body.classList.contains('fs'))) { await page.evaluate(() => document.querySelector('#fsExit').click()); await page.waitForTimeout(300); }
+ok('выход из полного экрана', await page.evaluate(() => !document.body.classList.contains('fs') && getComputedStyle(document.querySelector('.tabbar')).display !== 'none'));
+
 // Тренировка
 await go('train');
 const hidden = await page.evaluate(() => {

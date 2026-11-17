@@ -62,7 +62,10 @@
   function fit(frame) {
     const stage = frame.parentElement;
     if (!stage || !stage.clientWidth) return;
-    const s = Math.min((stage.clientWidth - 12) / CARD_W, (stage.clientHeight - 8) / CARD_H);
+    const cs = getComputedStyle(stage), fsMode = document.body.classList.contains('fs');
+    const aw = stage.clientWidth - parseFloat(cs.paddingLeft) - parseFloat(cs.paddingRight);
+    const ah = stage.clientHeight - parseFloat(cs.paddingTop) - parseFloat(cs.paddingBottom);
+    const s = Math.min((aw - (fsMode ? 0 : 12)) / CARD_W, (ah - (fsMode ? 0 : 8)) / CARD_H);
     frame.style.width = CARD_W * s + 'px';
     frame.style.height = CARD_H * s + 'px';
     const inner = frame.querySelector('.card-scale');
@@ -93,6 +96,7 @@
     const i = currentIndex(list);
     state.current = list[i].id; save();
     $('counter').textContent = `${i + 1} / ${list.length}`;
+    $('fsChip').textContent = `${i + 1} / ${list.length}`;
     $('topRight').textContent = groupName(list[i].group);
     $('prevBtn').disabled = i === 0; $('nextBtn').disabled = i === list.length - 1;
     await renderCard(frame, list[i]);
@@ -136,6 +140,31 @@
   }
   const wait = (ms) => new Promise((r) => setTimeout(r, ms));
 
+  // полноэкранный режим: карточка на весь экран, только свайпы
+  let swiped = false, fsApi = false, fsTimer = null;
+  const inFs = () => document.body.classList.contains('fs');
+  function fsUi(show) {
+    clearTimeout(fsTimer);
+    $('fsUi').classList.toggle('dim', !show);
+    if (show) fsTimer = setTimeout(() => $('fsUi').classList.add('dim'), 2500);
+  }
+  function enterFs() {
+    document.body.classList.add('fs');
+    fsApi = false;
+    const el = document.documentElement;
+    if (el.requestFullscreen) { el.requestFullscreen({ navigationUI: 'hide' }).then(() => (fsApi = true)).catch(() => {}); }
+    fitAll(); fsUi(true);
+    setTimeout(fitAll, 150);
+  }
+  function exitFs() {
+    if (!inFs()) return;
+    document.body.classList.remove('fs');
+    if (document.fullscreenElement && document.exitFullscreen) document.exitFullscreen().catch(() => {});
+    fsApi = false; clearTimeout(fsTimer); $('fsUi').classList.add('dim');
+    fitAll(); setTimeout(fitAll, 150);
+  }
+  document.addEventListener('fullscreenchange', () => { if (!document.fullscreenElement && fsApi) exitFs(); else setTimeout(fitAll, 100); });
+
   // свайп
   function attachSwipe(stage, frame, onSwipe) {
     let x0 = null, y0 = 0, dx = 0, horiz = null, id = null;
@@ -156,6 +185,7 @@
       if (x0 === null || e.pointerId !== id) return;
       const was = horiz; x0 = null;
       if (!was) return;
+      swiped = true; setTimeout(() => (swiped = false), 60);
       if (Math.abs(dx) > Math.min(70, stage.clientWidth * 0.18)) onSwipe(dx < 0 ? 1 : -1);
       else { frame.classList.add('anim'); frame.style.transform = ''; setTimeout(() => frame.classList.remove('anim'), 230); }
     };
@@ -318,6 +348,8 @@
       if (!inFilter(byId[arg])) state.filter = 'all';
       state.current = arg; save();
     }
+    if (name !== 'cards') exitFs();
+    $('fsBtn').hidden = name !== 'cards';
     document.querySelectorAll('.view').forEach((v) => (v.hidden = v.id !== 'view-' + name));
     document.querySelectorAll('.tabbar a').forEach((a) => a.classList.toggle('on', a.dataset.tab === name));
     $('viewTitle').textContent = TITLES[name];
@@ -330,7 +362,11 @@
     $('nextBtn').onclick = () => go(1);
     $('trashBtn').onclick = trashCurrent;
     attachSwipe($('stage'), $('cardFrame'), go);
+    $('fsBtn').onclick = enterFs;
+    $('fsExit').onclick = exitFs;
+    $('stage').addEventListener('click', () => { if (inFs() && !swiped) fsUi($('fsUi').classList.contains('dim')); });
     document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') exitFs();
       if (!$('modal').hidden || $('view-cards').hidden) return;
       if (e.key === 'ArrowLeft') go(-1); else if (e.key === 'ArrowRight') go(1);
     });

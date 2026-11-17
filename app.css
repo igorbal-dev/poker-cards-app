@@ -43,6 +43,20 @@ main{flex:1;min-height:0;position:relative}
 .btn.wide{flex:1}
 .btn.small{min-height:36px;padding:8px 12px;font-size:13px;border-radius:10px}
 
+/* полноэкранный режим */
+.fs-enter{margin-left:10px;width:38px;height:38px;border:1px solid var(--line);border-radius:10px;background:transparent;color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.fs-enter svg{width:20px;height:20px}
+.fs-ui{display:none}
+body.fs .topbar,body.fs .controls,body.fs .tabbar{display:none}
+body.fs .stage{background:var(--card);padding:var(--safe-top) env(safe-area-inset-right,0px) var(--safe-bottom) env(safe-area-inset-left,0px)}
+body.fs .card-frame{border-radius:0;box-shadow:none}
+body.fs .fs-ui{display:flex;position:absolute;left:0;right:0;bottom:0;z-index:5;padding:0 12px calc(var(--safe-bottom) + 12px);align-items:center;justify-content:space-between;pointer-events:none;transition:opacity .25s}
+body.fs .fs-ui.dim{opacity:0}
+body.fs .fs-ui:not(.dim) .fs-exit{pointer-events:auto}
+.fs-chip{padding:6px 12px;border-radius:999px;background:#000A;color:var(--text);font:700 13px/1 'JetBrains Mono',ui-monospace,monospace;margin-left:auto;margin-right:auto;transform:translateX(18px);backdrop-filter:blur(6px)}
+.fs-exit{width:36px;height:36px;border:0;border-radius:50%;background:#000A;color:var(--text);display:flex;align-items:center;justify-content:center;padding:0;cursor:pointer}
+.fs-exit svg{width:18px;height:18px}
+
 /* оглавление */
 .chips{display:flex;gap:8px;flex-wrap:wrap;padding:4px 0 12px;position:sticky;top:-4px;background:var(--bg);z-index:1}
 .chip{border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:999px;padding:8px 14px;font-weight:700;font-size:13px;cursor:pointer}
