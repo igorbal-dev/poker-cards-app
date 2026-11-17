@@ -1,0 +1,122 @@
+{
+ "groups": [
+  {
+   "id": "river",
+   "name": "Блефы ривера"
+  },
+  {
+   "id": "overfold",
+   "name": "Перефолды"
+  }
+ ],
+ "cards": [
+  {
+   "id": "01",
+   "group": "river",
+   "title": "Проба, потом ривер крупнее — коллируй",
+   "name": "01 · Блеф ривера · проба BB + ривер",
+   "who": "BU/CO open → BB call",
+   "rel": "B",
+   "file": "cards/01.html"
+  },
+  {
+   "id": "02",
+   "group": "river",
+   "title": "Лид ривера 50% — коллируй",
+   "name": "02 · Блеф ривера · лид BB после чек-чек",
+   "who": "BU/CO open → BB call",
+   "rel": "B",
+   "file": "cards/02.html"
+  },
+  {
+   "id": "03",
+   "group": "river",
+   "title": "BU бросил тёрн и ставит ривер",
+   "name": "03 · Блеф ривера · BU ставка-чек-ставка",
+   "who": "BU/CO open → BB call",
+   "rel": "B",
+   "file": "cards/03.html"
+  },
+  {
+   "id": "04",
+   "group": "river",
+   "title": "SB против BB: три барреля",
+   "name": "04 · Блеф ривера · SB три барреля",
+   "who": "SB open → BB call",
+   "rel": "B",
+   "file": "cards/04.html"
+  },
+  {
+   "id": "05",
+   "group": "river",
+   "title": "Здесь блефов мало — фолди",
+   "name": "05 · Недоблеф ривера · фолди",
+   "who": "Разные споты",
+   "rel": "C",
+   "file": "cards/05.html"
+  },
+  {
+   "id": "06",
+   "group": "overfold",
+   "title": "Два чека BU — забирай ривер",
+   "name": "06 · SRP · BU чекнул флоп и тёрн",
+   "who": "BU open → BB call",
+   "rel": "A",
+   "file": "cards/06.html"
+  },
+  {
+   "id": "07",
+   "group": "overfold",
+   "title": "Контбет 33% и чек тёрна — ставь ривер",
+   "name": "07 · SRP · контбет 33% и чек тёрна",
+   "who": "BU open → BB call",
+   "rel": "A",
+   "file": "cards/07.html"
+  },
+  {
+   "id": "08",
+   "group": "overfold",
+   "title": "BU чекнул флоп — атакуй тёрн",
+   "name": "08 · SRP · BU чекнул флоп",
+   "who": "BU open → BB call",
+   "rel": "A",
+   "file": "cards/08.html"
+  },
+  {
+   "id": "09",
+   "group": "overfold",
+   "title": "Отложенный контбет: сухие доски",
+   "name": "09 · SRP · отложенный контбет",
+   "who": "BU open → BB call",
+   "rel": "B",
+   "file": "cards/09.html"
+  },
+  {
+   "id": "10",
+   "group": "overfold",
+   "title": "3-бет пот: контбет 75%",
+   "name": "10 · 3BP · контбет флопа",
+   "who": "Блайнд 3bet → IP call",
+   "rel": "A",
+   "file": "cards/10.html"
+  },
+  {
+   "id": "11",
+   "group": "overfold",
+   "title": "После 33% тёрн отдают чаще",
+   "name": "11 · 3BP · второй баррель",
+   "who": "Блайнд 3bet → IP call",
+   "rel": "B",
+   "file": "cards/11.html"
+  },
+  {
+   "id": "12",
+   "group": "overfold",
+   "title": "3-бет пот: чек флопа — ставь тёрн",
+   "name": "12 · 3BP · отложенный контбет",
+   "who": "Блайнд 3bet → IP call",
+   "rel": "A",
+   "file": "cards/12.html"
+  }
+ ]
+}

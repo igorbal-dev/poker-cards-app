@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, user-scalable=no">
+<meta name="theme-color" content="#10141A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Карточки">
+<title>Покерные карточки</title>
+<link rel="manifest" href="manifest.json">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preload" href="fonts/inter-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<div id="app">
+  <header class="topbar">
+    <div class="topbar-title" id="viewTitle">Карточки</div>
+    <div class="topbar-right" id="topRight"></div>
+  </header>
+
+  <main id="main">
+    <!-- Просмотр -->
+    <section class="view" id="view-cards" hidden>
+      <div class="stage" id="stage">
+        <div class="card-frame" id="cardFrame"></div>
+      </div>
+      <div class="controls">
+        <button class="btn icon" id="prevBtn" aria-label="Предыдущая">‹</button>
+        <div class="counter" id="counter">– / –</div>
+        <button class="btn icon" id="nextBtn" aria-label="Следующая">›</button>
+        <button class="btn ghost danger" id="trashBtn">Убрать</button>
+      </div>
+    </section>
+
+    <!-- Оглавление -->
+    <section class="view scroll" id="view-toc" hidden>
+      <div class="chips" id="filterChips"></div>
+      <div id="tocList"></div>
+    </section>
+
+    <!-- Тренировка -->
+    <section class="view" id="view-train" hidden>
+      <div class="progress"><div class="progress-bar" id="trainBar"></div></div>
+      <div class="stage" id="trainStage">
+        <div class="card-frame" id="trainFrame"></div>
+      </div>
+      <div class="controls" id="trainControls"></div>
+    </section>
+
+    <!-- Корзина -->
+    <section class="view scroll" id="view-trash" hidden>
+      <div id="trashList"></div>
+      <div class="trash-actions">
+        <button class="btn" id="copyDeletedBtn">Скопировать список удалённых</button>
+        <div class="hint" id="deletedInfo"></div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="tabbar">
+    <a href="#cards" data-tab="cards"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><rect x="6" y="3" width="12" height="18" rx="2.5"/></svg>Карточки</a>
+    <a href="#toc" data-tab="toc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg>Оглавление</a>
+    <a href="#train" data-tab="train"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>Тренировка</a>
+    <a href="#trash" data-tab="trash"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h16M9 7V4h6v3M6 7l1 13h10l1-13"/></svg>Корзина<b class="badge" id="trashBadge" hidden></b></a>
+  </nav>
+</div>
+
+<div class="modal" id="modal" hidden>
+  <div class="modal-box">
+    <div class="modal-text" id="modalText"></div>
+    <div class="modal-buttons">
+      <button class="btn ghost" id="modalCancel">Отмена</button>
+      <button class="btn danger" id="modalOk">Да</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast" hidden></div>
+
+<script src="app.js"></script>
+</body>
+</html>

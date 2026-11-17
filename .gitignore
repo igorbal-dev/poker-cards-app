@@ -1,0 +1,7 @@
+node_modules/
+incoming/*
+!incoming/README.md
+*.sqlite
+login.env
+snapmda_*.json
+.DS_Store
