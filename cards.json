@@ -13,34 +13,34 @@
   {
    "id": "01",
    "group": "river",
-   "title": "Проба, потом ривер крупнее — коллируй",
+   "title": "BB probe, bigger river → call",
    "name": "01 · Блеф ривера · проба BB + ривер",
-   "who": "BU/CO open → BB call",
+   "who": "BTN/CO open → BB call",
    "rel": "B",
    "file": "cards/01.html"
   },
   {
    "id": "02",
    "group": "river",
-   "title": "Лид ривера 50% — коллируй",
+   "title": "BB river lead 50% → call",
    "name": "02 · Блеф ривера · лид BB после чек-чек",
-   "who": "BU/CO open → BB call",
+   "who": "BTN/CO open → BB call",
    "rel": "B",
    "file": "cards/02.html"
   },
   {
    "id": "03",
    "group": "river",
-   "title": "BU бросил тёрн и ставит ривер",
+   "title": "BTN skips turn, bets river → call",
    "name": "03 · Блеф ривера · BU ставка-чек-ставка",
-   "who": "BU/CO open → BB call",
+   "who": "BTN/CO open → BB call",
    "rel": "B",
    "file": "cards/03.html"
   },
   {
    "id": "04",
    "group": "river",
-   "title": "SB против BB: три барреля",
+   "title": "SB vs BB: triple barrel → call",
    "name": "04 · Блеф ривера · SB три барреля",
    "who": "SB open → BB call",
    "rel": "B",
@@ -49,81 +49,81 @@
   {
    "id": "05",
    "group": "river",
-   "title": "Здесь блефов мало — фолди",
+   "title": "Underbluffed rivers → fold",
    "name": "05 · Недоблеф ривера · фолди",
-   "who": "Разные споты",
+   "who": "Mixed spots",
    "rel": "C",
    "file": "cards/05.html"
   },
   {
    "id": "06",
    "group": "overfold",
-   "title": "Два чека BU — забирай ривер",
+   "title": "BTN checks twice → bet river",
    "name": "06 · SRP · BU чекнул флоп и тёрн",
-   "who": "BU open → BB call",
+   "who": "BTN open → BB call",
    "rel": "A",
    "file": "cards/06.html"
   },
   {
    "id": "07",
    "group": "overfold",
-   "title": "Контбет 33% и чек тёрна — ставь ривер",
+   "title": "Cbet 33%, turn checked → bet river",
    "name": "07 · SRP · контбет 33% и чек тёрна",
-   "who": "BU open → BB call",
+   "who": "BTN open → BB call",
    "rel": "A",
    "file": "cards/07.html"
   },
   {
    "id": "08",
    "group": "overfold",
-   "title": "BU чекнул флоп — атакуй тёрн",
+   "title": "BTN checks back flop → probe turn",
    "name": "08 · SRP · BU чекнул флоп",
-   "who": "BU open → BB call",
+   "who": "BTN open → BB call",
    "rel": "A",
    "file": "cards/08.html"
   },
   {
    "id": "09",
    "group": "overfold",
-   "title": "Отложенный контбет: сухие доски",
+   "title": "Delayed cbet: dry boards",
    "name": "09 · SRP · отложенный контбет",
-   "who": "BU open → BB call",
+   "who": "BTN open → BB call",
    "rel": "B",
    "file": "cards/09.html"
   },
   {
    "id": "10",
    "group": "overfold",
-   "title": "3-бет пот: контбет 75%",
+   "title": "3BP: cbet 75%",
    "name": "10 · 3BP · контбет флопа",
-   "who": "Блайнд 3bet → IP call",
+   "who": "Blind 3bet → IP call",
    "rel": "A",
    "file": "cards/10.html"
   },
   {
    "id": "11",
    "group": "overfold",
-   "title": "После 33% тёрн отдают чаще",
+   "title": "3BP: barrel turn after 33% cbet",
    "name": "11 · 3BP · второй баррель",
-   "who": "Блайнд 3bet → IP call",
+   "who": "Blind 3bet → IP call",
    "rel": "B",
    "file": "cards/11.html"
   },
   {
    "id": "12",
    "group": "overfold",
-   "title": "3-бет пот: чек флопа — ставь тёрн",
+   "title": "3BP: flop checked → bet turn",
    "name": "12 · 3BP · отложенный контбет",
-   "who": "Блайнд 3bet → IP call",
+   "who": "Blind 3bet → IP call",
    "rel": "A",
    "file": "cards/12.html"
   },
   {
    "id": "13",
    "group": "river",
-   "title": "Страшная карта и овербет — коллируй",
+   "title": "Scare card + river overbet → call",
    "name": "13 · Блеф ривера · какая карта пришла",
-   "who": "BU/CO open → BB call",
+   "who": "BTN/CO open → BB call",
    "rel": "B",
    "file": "cards/13.html"
   }

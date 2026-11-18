@@ -93,7 +93,7 @@ def meta_from_html(text, root):
     title_tag = re.search(r"<title>(.*?)</title>", text, re.S)
     name = strip_tags(title_tag.group(1)) if title_tag else ""
     h1 = re.search(r"<h1[^>]*>(.*?)</h1>", root, re.S)
-    rel = re.search(r"Надёжность\s*([ABC])", root)
+    rel = re.search(r"(?:Надёжность|Confidence|Reliability)\s*([ABC])", root)
     # первая строка карточки: [тип банка] [кто] [надёжность]
     head = re.search(r"<div[^>]*>(.*?)</div>", root[root.index(">") + 1:], re.S)
     spans = re.findall(r"<span[^>]*>(.*?)</span>", head.group(1), re.S) if head else []
@@ -114,7 +114,8 @@ def card_id(path, name):
 
 
 def guess_group(name):
-    return "river" if "блеф" in name.lower() else "overfold"
+    n = name.lower()
+    return "river" if ("блеф" in n or "bluff" in n) else "overfold"
 
 
 def main(argv):
