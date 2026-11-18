@@ -1,4 +1,5 @@
 node_modules/
+INBOX_APP.md
 incoming/*
 !incoming/README.md
 *.sqlite

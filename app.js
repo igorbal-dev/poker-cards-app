@@ -195,9 +195,16 @@
 
   // ---------- оглавление ----------
   const groupName = (gid) => (groups.find((g) => g.id === gid) || { name: gid || '' }).name;
+  // «01–05, 13»: подряд идущие номера сворачиваются в диапазон
   const range = (gid) => {
-    const ids = cards.filter((c) => c.group === gid).map((c) => c.id);
-    return ids.length ? (ids.length > 1 ? `${ids[0]}–${ids[ids.length - 1]}` : ids[0]) : '';
+    const nums = cards.filter((c) => c.group === gid).map((c) => parseInt(c.id, 10)).sort((a, b) => a - b);
+    const pad = (n) => String(n).padStart(2, '0');
+    const out = [];
+    for (let i = 0; i < nums.length; ) {
+      let j = i; while (j + 1 < nums.length && nums[j + 1] === nums[j] + 1) j++;
+      out.push(j > i ? `${pad(nums[i])}–${pad(nums[j])}` : pad(nums[i])); i = j + 1;
+    }
+    return out.join(', ');
   };
 
   function showToc() {

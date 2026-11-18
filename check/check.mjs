@@ -5,6 +5,7 @@ import { writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
+const N = 13; // число карточек в cards.json
 const BASE = process.env.BASE ?? 'http://localhost:3000/';
 const OUT = path.dirname(fileURLToPath(import.meta.url));
 const results = [];
@@ -28,21 +29,21 @@ const counter = () => page.textContent('#counter');
 await page.goto(BASE);
 await page.waitForSelector('#cardFrame .card-scale');
 const total = await page.evaluate(() => fetch('cards.json').then((r) => r.json()).then((d) => d.cards.length));
-ok('cards.json загружен', total === 12, `${total} карточек`);
+ok('cards.json загружен', total === N, `${total} карточек`);
 ok('шрифты локальные загружены', await page.evaluate(() => document.fonts.check("800 16px Inter") && document.fonts.check("700 16px 'JetBrains Mono'")));
 
 // Оглавление
 await go('toc');
-ok('оглавление: 12 строк', (await page.$$('#tocList .row')).length === 12);
+ok(`оглавление: ${N} строк`, (await page.$$('#tocList .row')).length === N);
 await shot(page, '01_toc.png');
 await page.click('[data-filter="overfold"]');
 ok('фильтр «Перефолды»: 7 строк (06–12)', (await page.$$('#tocList .row')).length === 7);
 await page.click('[data-filter="river"]');
-ok('фильтр «Блефы ривера»: 5 строк (01–05)', (await page.$$('#tocList .row')).length === 5);
+ok('фильтр «Блефы ривера»: 6 строк (01–05, 13)', (await page.$$('#tocList .row')).length === 6);
 await page.click('[data-filter="all"]');
 
-// Все 12 карточек — без обрезки
-for (let n = 1; n <= 12; n++) {
+// Все карточки — без обрезки
+for (let n = 1; n <= N; n++) {
   const id = String(n).padStart(2, '0');
   await go('cards/' + id);
   const r = await page.evaluate(() => {
@@ -73,13 +74,13 @@ const swipe = async (x1, x2, y = 420) => {
 };
 await go('cards/01');
 await swipe(320, 60);
-ok('свайп влево → следующая', (await counter()) === '2 / 12', await counter());
+ok('свайп влево → следующая', (await counter()) === `2 / ${N}`, await counter());
 await swipe(60, 320);
-ok('свайп вправо → предыдущая', (await counter()) === '1 / 12', await counter());
+ok('свайп вправо → предыдущая', (await counter()) === `1 / ${N}`, await counter());
 await page.click('#nextBtn'); await page.waitForTimeout(600);
-ok('кнопка › работает', (await counter()) === '2 / 12');
+ok('кнопка › работает', (await counter()) === `2 / ${N}`);
 await page.click('#prevBtn'); await page.waitForTimeout(600);
-ok('кнопка ‹ работает', (await counter()) === '1 / 12');
+ok('кнопка ‹ работает', (await counter()) === `1 / ${N}`);
 
 // Полноэкранный режим
 await go('cards/06');
@@ -92,9 +93,9 @@ const fsInfo = await page.evaluate(() => {
 ok('полный экран: меню и кнопки скрыты, карточка во всю ширину', fsInfo.hiddenUi && fsInfo.w >= fsInfo.vw - 1 - 0.5 * 0 && fsInfo.top >= -0.5 && fsInfo.bottom <= fsInfo.vh + 0.5, JSON.stringify(fsInfo));
 await shot(page, '07_fullscreen.png');
 await swipe(320, 60);
-ok('полный экран: свайп влево → 07', (await page.textContent('#fsChip')) === '7 / 12', await page.textContent('#fsChip'));
+ok('полный экран: свайп влево → 07', (await page.textContent('#fsChip')) === `7 / ${N}`, await page.textContent('#fsChip'));
 await swipe(60, 320);
-ok('полный экран: свайп вправо → 06', (await page.textContent('#fsChip')) === '6 / 12');
+ok('полный экран: свайп вправо → 06', (await page.textContent('#fsChip')) === `6 / ${N}`);
 await page.click('#fsExit', { force: true }).catch(() => {});
 await page.waitForTimeout(300);
 if (await page.evaluate(() => document.body.classList.contains('fs'))) { await page.evaluate(() => document.querySelector('#fsExit').click()); await page.waitForTimeout(300); }
@@ -122,9 +123,9 @@ await shot(page, '05_train_after.png');
 await page.click('#knownBtn'); await page.waitForTimeout(400);                 // 01 — знал
 await page.click('#trainControls [data-reveal]'); await page.waitForTimeout(300);
 await page.click('#unknownBtn'); await page.waitForTimeout(400);               // 02 — не знал
-ok('счётчик прогресса', (await page.textContent('#topRight')).startsWith('3 / 12'), await page.textContent('#topRight'));
+ok('счётчик прогресса', (await page.textContent('#topRight')).startsWith(`3 / ${N}`), await page.textContent('#topRight'));
 await page.reload(); await page.waitForTimeout(800);
-ok('прогресс тренировки сохранился после перезагрузки', (await page.textContent('#topRight')).startsWith('3 / 12'));
+ok('прогресс тренировки сохранился после перезагрузки', (await page.textContent('#topRight')).startsWith(`3 / ${N}`));
 // новый круг: «не знал» идут первыми
 await page.evaluate(() => { const s = JSON.parse(localStorage.getItem('pokerCards.v1')); s.train.session = null; localStorage.setItem('pokerCards.v1', JSON.stringify(s)); });
 await page.reload(); await page.waitForTimeout(800);
@@ -138,11 +139,11 @@ const trash = async (id) => {
   await page.click('#modalOk'); await page.waitForTimeout(400);
 };
 await trash('03');
-ok('после «Убрать» 11 карточек', (await counter()).endsWith('/ 11'), await counter());
+ok('после «Убрать» N-1 карточек', (await counter()).endsWith(`/ ${N - 1}`), await counter());
 await trash('07');
-ok('после второго «Убрать» 10 карточек', (await counter()).endsWith('/ 10'));
+ok('после второго «Убрать» N-2 карточек', (await counter()).endsWith(`/ ${N - 2}`));
 await page.reload(); await page.waitForTimeout(800);
-ok('корзина сохранилась после перезагрузки', (await counter()).endsWith('/ 10'));
+ok('корзина сохранилась после перезагрузки', (await counter()).endsWith(`/ ${N - 2}`));
 await go('trash');
 ok('в корзине 2 карточки', (await page.$$('.trash-item')).length === 2);
 await shot(page, '06_trash.png');
@@ -156,15 +157,15 @@ const clip = await page.evaluate(() => navigator.clipboard.readText());
 ok('«Скопировать список удалённых» кладёт номера в буфер', clip === '03', JSON.stringify(clip));
 await page.reload(); await page.waitForTimeout(800);
 await go('toc');
-ok('после перезагрузки: 11 карточек, 03 нет', (await page.$$('#tocList .row')).length === 11 && !(await page.$('[data-open="03"]')));
+ok('после перезагрузки: N-1 карточек, 03 нет', (await page.$$('#tocList .row')).length === N - 1 && !(await page.$('[data-open="03"]')));
 
 // Офлайн (service worker)
 await page.evaluate(() => navigator.serviceWorker.ready);
 await page.waitForTimeout(1000);
 await context.setOffline(true);
 await page.reload(); await page.waitForTimeout(1200);
-await go('cards/12');
-ok('офлайн: приложение и карточка 12 открываются', (await page.$('#cardFrame .card-scale > div')) !== null && (await counter()) === '11 / 11', await counter());
+await go('cards/13');
+ok('офлайн: приложение и карточка 13 открываются', (await page.$('#cardFrame .card-scale > div')) !== null && (await counter()) === `${N - 1} / ${N - 1}`, await counter());
 await context.setOffline(false);
 
 ok('нет ошибок JS в консоли', errors.length === 0, errors.join(' | '));

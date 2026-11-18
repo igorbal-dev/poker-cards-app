@@ -117,6 +117,15 @@
    "who": "Блайнд 3bet → IP call",
    "rel": "A",
    "file": "cards/12.html"
+  },
+  {
+   "id": "13",
+   "group": "river",
+   "title": "Страшная карта и овербет — коллируй",
+   "name": "13 · Блеф ривера · какая карта пришла",
+   "who": "BU/CO open → BB call",
+   "rel": "B",
+   "file": "cards/13.html"
   }
  ]
 }
