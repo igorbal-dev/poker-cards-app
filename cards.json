@@ -7,6 +7,14 @@
   {
    "id": "overfold",
    "name": "Перефолды"
+  },
+  {
+   "id": "raises",
+   "name": "Рейзы"
+  },
+  {
+   "id": "multi",
+   "name": "Мультипоты"
   }
  ],
  "cards": [
@@ -126,6 +134,42 @@
    "who": "BTN/CO open → BB call",
    "rel": "B",
    "file": "cards/13.html"
+  },
+  {
+   "id": "14",
+   "group": "raises",
+   "title": "River raise-bluff: who folds",
+   "name": "14 · Рейз-блеф ривера · линии с чеками",
+   "who": "BTN open → BB call",
+   "rel": "B",
+   "file": "cards/14.html"
+  },
+  {
+   "id": "15",
+   "group": "overfold",
+   "title": "3BP with air: which line",
+   "name": "15 · 3BP · линия с воздухом",
+   "who": "Blind 3bet → IP call",
+   "rel": "B",
+   "file": "cards/15.html"
+  },
+  {
+   "id": "16",
+   "group": "multi",
+   "title": "3-way: bet after checks",
+   "name": "16 · Мультипот · ставка после чеков",
+   "who": "3-way pots",
+   "rel": "B",
+   "file": "cards/16.html"
+  },
+  {
+   "id": "17",
+   "group": "multi",
+   "title": "3-way: flop bet sizing",
+   "name": "17 · Мультипот · контбет и лимп-пот",
+   "who": "3-way pots",
+   "rel": "B",
+   "file": "cards/17.html"
   }
  ]
 }

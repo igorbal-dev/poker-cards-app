@@ -31,7 +31,11 @@ DEFAULT_SRC = ROOT / "incoming"
 DEFAULT_GROUPS = [
     {"id": "river", "name": "Блефы ривера"},
     {"id": "overfold", "name": "Перефолды"},
+    {"id": "raises", "name": "Рейзы"},
+    {"id": "multi", "name": "Мультипоты"},
 ]
+# группы для новых карточек (если у карточки ещё нет группы в cards.json)
+CARD_GROUPS = {"14": "raises", "15": "overfold", "16": "multi", "17": "multi"}
 
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",
         "meta", "source", "track", "wbr"}
@@ -133,6 +137,8 @@ def main(argv):
     else:
         data = {"groups": DEFAULT_GROUPS, "cards": []}
     data.setdefault("groups", DEFAULT_GROUPS)
+    have = {g["id"] for g in data["groups"]}
+    data["groups"] += [g for g in DEFAULT_GROUPS if g["id"] not in have]
     by_id = {c["id"]: c for c in data.get("cards", [])}
 
     CARDS_DIR.mkdir(exist_ok=True)
@@ -146,7 +152,7 @@ def main(argv):
         prev = by_id.get(cid, {})
         by_id[cid] = {
             "id": cid,
-            "group": prev.get("group") or guess_group(meta["name"]),
+            "group": prev.get("group") or CARD_GROUPS.get(cid) or guess_group(meta["name"]),
             "title": meta["title"],
             "name": meta["name"],
             "who": meta["who"],
