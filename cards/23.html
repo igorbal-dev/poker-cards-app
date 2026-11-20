@@ -1,0 +1,80 @@
+<style>
+body{margin:0}
+</style>
+<div style="width: 390px; height: 844px; box-sizing: border-box; padding: 20px 16px; display: flex; flex-direction: column; gap: 11px; background: #10141A; color: #F2F4F7; font-family: 'Inter',system-ui,-apple-system,'Segoe UI',sans-serif">
+<div style="display: flex; align-items: center; gap: 8px">
+<span style="padding: 4px 8px; border-radius: 6px; background: #F5A524; color: #10141A; font-size: 12px; font-weight: 800">3BP</span>
+<span style="font-size: 13px; font-weight: 600; color: #9AA6B5">3-bet & 4-bet pots</span>
+<span style="margin-left: auto; padding: 3px 8px; border-radius: 6px; border: 1px solid #9AA6B5; font-size: 11px; font-weight: 700">Confidence B</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px">
+<h1 style="margin: 0; font-size: 24px; line-height: 1.08; font-weight: 800">3BP/4BP big river bets: who bluffs</h1>
+<p style="margin: 0; font-size: 12.5px; line-height: 1.32; color: #9AA6B5">Доля блефов в ставке ривера по вскрытиям, %. EV — колл блеф-кэтчером, % банка.</p>
+</div>
+<div style="display: grid; grid-template-columns: 1fr 30px 38px 36px 34px; column-gap: 3px; padding: 0 12px; font-size: 10.5px">
+<span style="color: #9AA6B5">line, river size</span><span style="text-align: right; font-weight: 700; color: #7CB7FF">GTO</span><span style="text-align: right; font-weight: 700; color: #F5A524">Pool</span><span style="text-align: right; color: #9AA6B5">EV call</span><span style="text-align: right; color: #9AA6B5">SD</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 5px"><div style="padding: 3px 12px 0; font-size: 11px; font-weight: 700; color: #9AA6B5">Fold</div><div style="display: grid; grid-template-columns: 1fr 30px 38px 36px 34px; align-items: center; column-gap: 3px; padding: 5px 12px; border-radius: 12px; background: #1A212B; ">
+<div style="display: flex; align-items: center; gap: 4px"><span style="font-size: 13px; font-weight: 600; color: #F2F4F7">3BP IP 3-bettor b-b-b 100%</span></div>
+<span style="text-align: right; font: 500 15px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #7CB7FF">32</span>
+<span style="text-align: right; font: 700 15px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #C5CCD6">29</span>
+<span style="text-align: right; font: 700 12px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #F2F4F7">−13</span>
+<span style="text-align: right; font: 500 10px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #9AA6B5">12k</span>
+</div><div style="display: grid; grid-template-columns: 1fr 30px 38px 36px 34px; align-items: center; column-gap: 3px; padding: 5px 12px; border-radius: 12px; background: #1A212B; ">
+<div style="display: flex; align-items: center; gap: 4px"><span style="font-size: 13px; font-weight: 600; color: #F2F4F7">3BP IP 3-bettor b-b-b 150%</span></div>
+<span style="text-align: right; font: 500 15px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #7CB7FF">37</span>
+<span style="text-align: right; font: 700 20px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #7CB7FF">32</span>
+<span style="text-align: right; font: 700 12px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #F2F4F7">−21</span>
+<span style="text-align: right; font: 500 10px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #9AA6B5">1,7k</span>
+</div><div style="display: grid; grid-template-columns: 1fr 30px 38px 36px 34px; align-items: center; column-gap: 3px; padding: 5px 12px; border-radius: 12px; background: #1A212B; ">
+<div style="display: flex; align-items: center; gap: 4px"><span style="font-size: 13px; font-weight: 600; color: #F2F4F7">3BP OOP 3-bettor x-x-b 75%</span></div>
+<span style="text-align: right; font: 500 15px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #7CB7FF">30</span>
+<span style="text-align: right; font: 700 15px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #C5CCD6">26</span>
+<span style="text-align: right; font: 700 12px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #F2F4F7">−11</span>
+<span style="text-align: right; font: 500 10px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #9AA6B5">4,9k</span>
+</div><div style="display: grid; grid-template-columns: 1fr 30px 38px 36px 34px; align-items: center; column-gap: 3px; padding: 5px 12px; border-radius: 12px; background: #1A212B; ">
+<div style="display: flex; align-items: center; gap: 4px"><span style="font-size: 13px; font-weight: 600; color: #F2F4F7">3BP OOP 3-bettor x-x-b 100%</span></div>
+<span style="text-align: right; font: 500 15px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #7CB7FF">33</span>
+<span style="text-align: right; font: 700 20px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #7CB7FF">24</span>
+<span style="text-align: right; font: 700 12px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #F2F4F7">−28</span>
+<span style="text-align: right; font: 500 10px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #9AA6B5">2,7k</span>
+</div><div style="display: grid; grid-template-columns: 1fr 30px 38px 36px 34px; align-items: center; column-gap: 3px; padding: 5px 12px; border-radius: 12px; background: #1A212B; ">
+<div style="display: flex; align-items: center; gap: 4px"><span style="font-size: 13px; font-weight: 600; color: #F2F4F7">4BP b-x-b 75%</span></div>
+<span style="text-align: right; font: 500 15px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #7CB7FF">31</span>
+<span style="text-align: right; font: 700 20px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #7CB7FF">24</span>
+<span style="text-align: right; font: 700 12px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #F2F4F7">−17</span>
+<span style="text-align: right; font: 500 10px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #9AA6B5">1,2k</span>
+</div><div style="display: grid; grid-template-columns: 1fr 30px 38px 36px 34px; align-items: center; column-gap: 3px; padding: 5px 12px; border-radius: 12px; background: #1A212B; ">
+<div style="display: flex; align-items: center; gap: 4px"><span style="font-size: 13px; font-weight: 600; color: #F2F4F7">4BP b-x-b 100%</span></div>
+<span style="text-align: right; font: 500 15px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #7CB7FF">32</span>
+<span style="text-align: right; font: 700 20px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #7CB7FF">24</span>
+<span style="text-align: right; font: 700 12px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #F2F4F7">−26</span>
+<span style="text-align: right; font: 500 10px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #9AA6B5">1,8k</span>
+</div><div style="padding: 3px 12px 0; font-size: 11px; font-weight: 700; color: #9AA6B5">Call</div><div style="display: grid; grid-template-columns: 1fr 30px 38px 36px 34px; align-items: center; column-gap: 3px; padding: 5px 12px; border-radius: 12px; background: #1A212B; ">
+<div style="display: flex; align-items: center; gap: 4px"><span style="font-size: 13px; font-weight: 600; color: #F2F4F7">3BP caller probes t+r 50%</span></div>
+<span style="text-align: right; font: 500 15px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #7CB7FF">25</span>
+<span style="text-align: right; font: 700 20px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #F5A524">35</span>
+<span style="text-align: right; font: 700 12px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #F2F4F7">+19</span>
+<span style="text-align: right; font: 500 10px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #9AA6B5">17k</span>
+</div><div style="display: grid; grid-template-columns: 1fr 30px 38px 36px 34px; align-items: center; column-gap: 3px; padding: 5px 12px; border-radius: 12px; background: #1A212B; ">
+<div style="display: flex; align-items: center; gap: 4px"><span style="font-size: 13px; font-weight: 600; color: #F2F4F7">3BP caller probes t+r 75%</span></div>
+<span style="text-align: right; font: 500 15px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #7CB7FF">30</span>
+<span style="text-align: right; font: 700 20px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #F5A524">37</span>
+<span style="text-align: right; font: 700 12px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #F2F4F7">+17</span>
+<span style="text-align: right; font: 500 10px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #9AA6B5">11k</span>
+</div><div style="display: grid; grid-template-columns: 1fr 30px 38px 36px 34px; align-items: center; column-gap: 3px; padding: 5px 12px; border-radius: 12px; background: #1A212B; ">
+<div style="display: flex; align-items: center; gap: 4px"><span style="font-size: 13px; font-weight: 600; color: #F2F4F7">3BP OOP 3-bettor b-b-b 75%</span></div>
+<span style="text-align: right; font: 500 15px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #7CB7FF">31</span>
+<span style="text-align: right; font: 700 15px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #C5CCD6">33</span>
+<span style="text-align: right; font: 700 12px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #F2F4F7">+7</span>
+<span style="text-align: right; font: 500 10px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #9AA6B5">29k</span>
+</div><div style="display: grid; grid-template-columns: 1fr 30px 38px 36px 34px; align-items: center; column-gap: 3px; padding: 5px 12px; border-radius: 12px; background: #1A212B; ">
+<div style="display: flex; align-items: center; gap: 4px"><span style="font-size: 13px; font-weight: 600; color: #F2F4F7">3BP OOP 3-bettor b-b-b 100%</span></div>
+<span style="text-align: right; font: 500 15px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #7CB7FF">33</span>
+<span style="text-align: right; font: 700 15px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #C5CCD6">36</span>
+<span style="text-align: right; font: 700 12px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #F2F4F7">+8</span>
+<span style="text-align: right; font: 500 10px/1 'JetBrains Mono',ui-monospace,Menlo,monospace; color: #9AA6B5">19k</span>
+</div></div>
+<div style="padding: 9px 12px; border-radius: 12px; border: 1px solid #3A4658; font-size: 13px; font-weight: 600; line-height: 1.33">Крупный ривер 3-беттора в позиции, x-x-bet 3-беттора без позиции и bet-check-bet в 4BP — недоблеф, фолди: −11…−28. Колли пробу тёрна и ривера коллера в 3BP и три барреля 3-беттора без позиции.</div>
+<p style="margin: 0; font-size: 10px; line-height: 1.32; color: #9AA6B5">SnapMDA, NL50–200, против рега. Доля блефов — по вскрытиям. 3BP IP: CO против BTN и HJ/LJ против IP; 3BP OOP: блайнды против всех. 4BP: BB/SB против BTN, BB против CO.</p>
+</div>

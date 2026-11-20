@@ -5,7 +5,7 @@ import { writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
-const N = 17; // число карточек в cards.json
+const N = 23; // число карточек в cards.json
 const BASE = process.env.BASE ?? 'http://localhost:3000/';
 const OUT = path.dirname(fileURLToPath(import.meta.url));
 const results = [];
@@ -37,13 +37,17 @@ await go('toc');
 ok(`оглавление: ${N} строк`, (await page.$$('#tocList .row')).length === N);
 await shot(page, '01_toc.png');
 await page.click('[data-filter="overfold"]');
-ok('фильтр «Перефолды»: 8 строк (06–12, 15)', (await page.$$('#tocList .row')).length === 8);
+ok('фильтр «Перефолды»: 9 строк (06–12, 15, 19)', (await page.$$('#tocList .row')).length === 9);
 await page.click('[data-filter="raises"]');
 ok('фильтр «Рейзы»: 1 строка (14)', (await page.$$('#tocList .row')).length === 1);
 await page.click('[data-filter="multi"]');
 ok('фильтр «Мультипоты»: 2 строки (16–17)', (await page.$$('#tocList .row')).length === 2);
 await page.click('[data-filter="river"]');
-ok('фильтр «Блефы ривера»: 6 строк (01–05, 13)', (await page.$$('#tocList .row')).length === 6);
+ok('фильтр «Блефы ривера»: 7 строк (01–05, 13, 23)', (await page.$$('#tocList .row')).length === 7);
+await page.click('[data-filter="fourbet"]');
+ok('фильтр «4-бет поты»: 1 строка (18)', (await page.$$('#tocList .row')).length === 1);
+await page.click('[data-filter="runout"]');
+ok('фильтр «Карта тёрна/ривера»: 3 строки (20–22)', (await page.$$('#tocList .row')).length === 3);
 await page.click('[data-filter="all"]');
 
 // Все карточки — без обрезки

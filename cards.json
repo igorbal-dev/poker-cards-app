@@ -15,6 +15,14 @@
   {
    "id": "multi",
    "name": "Мультипоты"
+  },
+  {
+   "id": "fourbet",
+   "name": "4-бет поты"
+  },
+  {
+   "id": "runout",
+   "name": "Карта тёрна/ривера"
   }
  ],
  "cards": [
@@ -170,6 +178,60 @@
    "who": "3-way pots",
    "rel": "B",
    "file": "cards/17.html"
+  },
+  {
+   "id": "18",
+   "group": "fourbet",
+   "title": "4BP: 4-bettor checks back → bet turn",
+   "name": "18 · 4BP · 4-беттор прочекал флоп",
+   "who": "4-bet pots, blinds vs BTN/CO",
+   "rel": "B",
+   "file": "cards/18.html"
+  },
+  {
+   "id": "19",
+   "group": "overfold",
+   "title": "3BP vs IP 3-bettor: probe low boards",
+   "name": "19 · 3BP · проба против 3-беттора в позиции",
+   "who": "CO/HJ open → IP 3-bet → call",
+   "rel": "B",
+   "file": "cards/19.html"
+  },
+  {
+   "id": "20",
+   "group": "runout",
+   "title": "Turn barrel: pick the card",
+   "name": "20 · SRP · второй баррель по карте тёрна",
+   "who": "BTN open → BB call",
+   "rel": "A",
+   "file": "cards/20.html"
+  },
+  {
+   "id": "21",
+   "group": "runout",
+   "title": "Probe & delayed c-bet: any card but an ace",
+   "name": "21 · SRP · проба и отложенный контбет по карте тёрна",
+   "who": "BTN open → BB call",
+   "rel": "A",
+   "file": "cards/21.html"
+  },
+  {
+   "id": "22",
+   "group": "runout",
+   "title": "Missed a street? Bet the river — any card",
+   "name": "22 · SRP · ставка ривера после пропущенной улицы",
+   "who": "BTN open → BB call",
+   "rel": "A",
+   "file": "cards/22.html"
+  },
+  {
+   "id": "23",
+   "group": "river",
+   "title": "3BP/4BP big river bets: who bluffs",
+   "name": "23 · 3BP/4BP · крупный ривер",
+   "who": "3-bet & 4-bet pots",
+   "rel": "B",
+   "file": "cards/23.html"
   }
  ]
 }
