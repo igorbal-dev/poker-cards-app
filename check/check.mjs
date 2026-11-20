@@ -5,7 +5,7 @@ import { writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
-const N = 28; // число карточек в cards.json
+const N = 30; // число карточек в cards.json
 const BASE = process.env.BASE ?? 'http://localhost:3000/';
 const OUT = path.dirname(fileURLToPath(import.meta.url));
 const results = [];
@@ -50,6 +50,8 @@ await page.click('[data-filter="runout"]');
 ok('фильтр «Карта тёрна/ривера»: 3 строки (20–22)', (await page.$$('#tocList .row')).length === 3);
 await page.click('[data-filter="fish"]');
 ok('фильтр «Фиши»: 1 строка (27)', (await page.$$('#tocList .row')).length === 1);
+await page.click('[data-filter="texture"]');
+ok('фильтр «Текстуры»: 2 строки (29–30)', (await page.$$('#tocList .row')).length === 2);
 await page.click('[data-filter="all"]');
 
 // Все карточки — без обрезки

@@ -27,6 +27,10 @@
   {
    "id": "fish",
    "name": "Фиши"
+  },
+  {
+   "id": "texture",
+   "name": "Текстуры"
   }
  ],
  "cards": [
@@ -281,6 +285,24 @@
    "who": "SB open → BB call",
    "rel": "A",
    "file": "cards/28.html"
+  },
+  {
+   "id": "29",
+   "group": "texture",
+   "title": "Texture map: bet after a check",
+   "name": "29 · SRP · карта текстур: ставка после чека",
+   "who": "BTN open → BB call",
+   "rel": "A",
+   "file": "cards/29.html"
+  },
+  {
+   "id": "30",
+   "group": "texture",
+   "title": "River bluff-catch by texture",
+   "name": "30 · SRP · колл ривера по текстуре",
+   "who": "BTN open → BB call",
+   "rel": "A",
+   "file": "cards/30.html"
   }
  ]
 }
