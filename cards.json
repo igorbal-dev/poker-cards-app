@@ -272,6 +272,15 @@
    "who": "3-bet pots vs fish",
    "rel": "B",
    "file": "cards/27.html"
+  },
+  {
+   "id": "28",
+   "group": "overfold",
+   "title": "BB vs SB: SB checks → bet",
+   "name": "28 · BB vs SB · пропущенная улица",
+   "who": "SB open → BB call",
+   "rel": "A",
+   "file": "cards/28.html"
   }
  ]
 }

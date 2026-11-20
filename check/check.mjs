@@ -5,7 +5,7 @@ import { writeFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 
-const N = 27; // число карточек в cards.json
+const N = 28; // число карточек в cards.json
 const BASE = process.env.BASE ?? 'http://localhost:3000/';
 const OUT = path.dirname(fileURLToPath(import.meta.url));
 const results = [];
@@ -37,7 +37,7 @@ await go('toc');
 ok(`оглавление: ${N} строк`, (await page.$$('#tocList .row')).length === N);
 await shot(page, '01_toc.png');
 await page.click('[data-filter="overfold"]');
-ok('фильтр «Перефолды»: 9 строк (06–12, 15, 19)', (await page.$$('#tocList .row')).length === 9);
+ok('фильтр «Перефолды»: 10 строк (06–12, 15, 19, 28)', (await page.$$('#tocList .row')).length === 10);
 await page.click('[data-filter="raises"]');
 ok('фильтр «Рейзы»: 2 строки (14, 26)', (await page.$$('#tocList .row')).length === 2);
 await page.click('[data-filter="multi"]');
