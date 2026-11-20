@@ -35,9 +35,10 @@ DEFAULT_GROUPS = [
     {"id": "multi", "name": "Мультипоты"},
     {"id": "fourbet", "name": "4-бет поты"},
     {"id": "runout", "name": "Карта тёрна/ривера"},
+    {"id": "fish", "name": "Фиши"},
 ]
 # группы для новых карточек (если у карточки ещё нет группы в cards.json)
-CARD_GROUPS = {"14": "raises", "15": "overfold", "16": "multi", "17": "multi", "18": "fourbet", "19": "overfold", "20": "runout", "21": "runout", "22": "runout", "23": "river"}
+CARD_GROUPS = {"14": "raises", "15": "overfold", "16": "multi", "17": "multi", "18": "fourbet", "19": "overfold", "20": "runout", "21": "runout", "22": "runout", "23": "river", "24": "river", "25": "fourbet", "26": "raises", "27": "fish"}
 
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",
         "meta", "source", "track", "wbr"}

@@ -23,6 +23,10 @@
   {
    "id": "runout",
    "name": "Карта тёрна/ривера"
+  },
+  {
+   "id": "fish",
+   "name": "Фиши"
   }
  ],
  "cards": [
@@ -232,6 +236,42 @@
    "who": "3-bet & 4-bet pots",
    "rel": "B",
    "file": "cards/23.html"
+  },
+  {
+   "id": "24",
+   "group": "river",
+   "title": "BB vs SB: call big river bets",
+   "name": "24 · BB vs SB · ривер",
+   "who": "SB open → BB call",
+   "rel": "A",
+   "file": "cards/24.html"
+  },
+  {
+   "id": "25",
+   "group": "fourbet",
+   "title": "4BP river: big bet after a check → fold",
+   "name": "25 · 4BP · ривер",
+   "who": "4-bet pots, all seats",
+   "rel": "C",
+   "file": "cards/25.html"
+  },
+  {
+   "id": "26",
+   "group": "raises",
+   "title": "3BP river raise: only vs bet-check-bet",
+   "name": "26 · 3BP · рейз ривера",
+   "who": "Blind 3-bet → IP call",
+   "rel": "B",
+   "file": "cards/26.html"
+  },
+  {
+   "id": "27",
+   "group": "fish",
+   "title": "3BP vs fish: stab caller, not 3-bettor",
+   "name": "27 · 3BP · против фиша",
+   "who": "3-bet pots vs fish",
+   "rel": "B",
+   "file": "cards/27.html"
   }
  ]
 }
