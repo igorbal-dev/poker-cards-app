@@ -31,9 +31,18 @@ DEFAULT_SRC = ROOT / "incoming"
 DEFAULT_GROUPS = [
     {"id": "river", "name": "Блефы ривера"},
     {"id": "overfold", "name": "Перефолды"},
+    {"id": "callriver", "name": "Колл ривера"},
+    {"id": "barrels", "name": "Баррели"},
+    {"id": "riverraise", "name": "Рейз ривера"},
+    {"id": "compare", "name": "Сравнение линий"},
 ]
 # группы для новых карточек (если у карточки ещё нет группы в cards.json)
-CARD_GROUPS = {}
+CARD_GROUPS = {
+    "6-01": "callriver", "6-02": "callriver", "6-03": "callriver",
+    "6-04": "barrels", "6-04b": "barrels",
+    "6-05": "riverraise", "6-06": "riverraise",
+    "6-07": "compare",
+}
 
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",
         "meta", "source", "track", "wbr"}

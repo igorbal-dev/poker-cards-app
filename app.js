@@ -195,14 +195,15 @@
 
   // ---------- оглавление ----------
   const groupName = (gid) => (groups.find((g) => g.id === gid) || { name: gid || '' }).name;
-  // «01–05, 13»: подряд идущие номера сворачиваются в диапазон
+  // «01–05, 13», «6-01–6-03, 6-04b»: подряд идущие номера сворачиваются в диапазон
   const range = (gid) => {
-    const nums = cards.filter((c) => c.group === gid).map((c) => parseInt(c.id, 10)).sort((a, b) => a - b);
-    const pad = (n) => String(n).padStart(2, '0');
+    const ids = cards.filter((c) => c.group === gid).map((c) => c.id);
+    const key = (id) => { const m = /^(?:(\d+)-)?(\d+)([a-z]?)$/.exec(id) || []; return { pre: m[1] || '', n: parseInt(m[2], 10), suf: m[3] || '' }; };
+    const next = (x, y) => { const a = key(x), b = key(y); return a.pre === b.pre && !a.suf && !b.suf && b.n === a.n + 1; };
     const out = [];
-    for (let i = 0; i < nums.length; ) {
-      let j = i; while (j + 1 < nums.length && nums[j + 1] === nums[j] + 1) j++;
-      out.push(j > i ? `${pad(nums[i])}–${pad(nums[j])}` : pad(nums[i])); i = j + 1;
+    for (let i = 0; i < ids.length; ) {
+      let j = i; while (j + 1 < ids.length && next(ids[j], ids[j + 1])) j++;
+      out.push(j > i ? `${ids[i]}–${key(ids[j]).pre ? ids[j].split('-')[1] : ids[j]}` : ids[i]); i = j + 1;
     }
     return out.join(', ');
   };

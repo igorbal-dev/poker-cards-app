@@ -7,6 +7,22 @@
   {
    "id": "overfold",
    "name": "Перефолды"
+  },
+  {
+   "id": "callriver",
+   "name": "Колл ривера"
+  },
+  {
+   "id": "barrels",
+   "name": "Баррели"
+  },
+  {
+   "id": "riverraise",
+   "name": "Рейз ривера"
+  },
+  {
+   "id": "compare",
+   "name": "Сравнение линий"
   }
  ],
  "cards": [
@@ -126,6 +142,78 @@
    "who": "BTN/CO open → BB call",
    "rel": "B",
    "file": "cards/13.html"
+  },
+  {
+   "id": "6-01",
+   "group": "callriver",
+   "title": "BTN bets 3 streets: call vs which sizes",
+   "name": "V6_01 · BU три барреля · по связкам",
+   "who": "BTN open → BB call",
+   "rel": "A",
+   "file": "cards/6-01.html"
+  },
+  {
+   "id": "6-02",
+   "group": "callriver",
+   "title": "BTN bets 3 streets: by board",
+   "name": "V6_02 · BU три барреля · по доскам",
+   "who": "BTN open → BB call",
+   "rel": "B",
+   "file": "cards/6-02.html"
+  },
+  {
+   "id": "6-03",
+   "group": "callriver",
+   "title": "BTN checks flop & turn, bets river",
+   "name": "V6_03 · BU чек-чек-ставка · по доскам",
+   "who": "BTN open → BB call",
+   "rel": "A",
+   "file": "cards/6-03.html"
+  },
+  {
+   "id": "6-04",
+   "group": "barrels",
+   "title": "Turn barrel after 33% c-bet",
+   "name": "V6_04 · второй баррель BU после контбета 33%",
+   "who": "BTN open → BB call",
+   "rel": "A",
+   "file": "cards/6-04.html"
+  },
+  {
+   "id": "6-04b",
+   "group": "barrels",
+   "title": "Turn barrel after 75% c-bet",
+   "name": "V6_04b · второй баррель BU после контбета 75%",
+   "who": "BTN open → BB call",
+   "rel": "A",
+   "file": "cards/6-04b.html"
+  },
+  {
+   "id": "6-05",
+   "group": "riverraise",
+   "title": "BB bets river after checks: raise?",
+   "name": "V6_05 · рейз ривера против BB · по размеру ставки",
+   "who": "BTN open → BB call",
+   "rel": "B",
+   "file": "cards/6-05.html"
+  },
+  {
+   "id": "6-06",
+   "group": "riverraise",
+   "title": "River raise after checks: by board",
+   "name": "V6_06 · рейз ривера против BB · по доскам",
+   "who": "BTN open → BB call",
+   "rel": "B",
+   "file": "cards/6-06.html"
+  },
+  {
+   "id": "6-07",
+   "group": "compare",
+   "title": "Air on flop: c-bet now or delay?",
+   "name": "V6_07 · контбет или отложенный · по доскам",
+   "who": "BTN open → BB call",
+   "rel": "B",
+   "file": "cards/6-07.html"
   }
  ]
 }
