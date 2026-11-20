@@ -31,15 +31,9 @@ DEFAULT_SRC = ROOT / "incoming"
 DEFAULT_GROUPS = [
     {"id": "river", "name": "Блефы ривера"},
     {"id": "overfold", "name": "Перефолды"},
-    {"id": "raises", "name": "Рейзы"},
-    {"id": "multi", "name": "Мультипоты"},
-    {"id": "fourbet", "name": "4-бет поты"},
-    {"id": "runout", "name": "Карта тёрна/ривера"},
-    {"id": "fish", "name": "Фиши"},
-    {"id": "texture", "name": "Текстуры"},
 ]
 # группы для новых карточек (если у карточки ещё нет группы в cards.json)
-CARD_GROUPS = {"14": "raises", "15": "overfold", "16": "multi", "17": "multi", "18": "fourbet", "19": "overfold", "20": "runout", "21": "runout", "22": "runout", "23": "river", "24": "river", "25": "fourbet", "26": "raises", "27": "fish", "28": "overfold", "29": "texture", "30": "texture"}
+CARD_GROUPS = {}
 
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",
         "meta", "source", "track", "wbr"}
@@ -115,6 +109,11 @@ def meta_from_html(text, root):
 
 
 def card_id(path, name):
+    # V6 и новее: «6-01», «6-04b» — чтобы не совпасть с номерами V5 (и с корзиной/удалёнными на телефоне)
+    v = re.search(r"V(\d+)_(\d+[a-z]?)\.dc\.html$", path.name, re.I)
+    if v and int(v.group(1)) >= 6:
+        num = re.match(r"(\d+)([a-z]?)", v.group(2).lower())
+        return f"{int(v.group(1))}-{int(num.group(1)):02d}{num.group(2)}"
     m = re.search(r"(\d+)\.dc\.html$", path.name) or re.match(r"\s*(\d+)", name)
     if not m:
         raise ValueError(f"не удалось определить номер карточки: {path.name}")
@@ -166,6 +165,9 @@ def main(argv):
         print(f"{path.name} -> {out.relative_to(ROOT).as_posix()}  [{by_id[cid]['group']}, {meta['rel']}] {meta['title']}")
 
     data["cards"] = [by_id[k] for k in sorted(by_id)]
+    # группы без карточек в колоде не показываем
+    used = {c["group"] for c in data["cards"]}
+    data["groups"] = [g for g in data["groups"] if g["id"] in used]
     CARDS_JSON.write_text(json.dumps(data, ensure_ascii=False, indent=1) + "\n", encoding="utf-8", newline="\n")
     print(f"cards.json: {len(data['cards'])} карточек")
 
