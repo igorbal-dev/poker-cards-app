@@ -754,6 +754,15 @@
    "who": "Open → BB call",
    "rel": "A",
    "file": "cards/20-01.html"
+  },
+  {
+   "id": "20-02",
+   "group": "overfold",
+   "title": "OOP opener: flop checked → bet turn",
+   "name": "V20_02 · SRP оупенер без позиции: флоп прочекан → ставка тёрна",
+   "who": "HJ/LJ/CO open → IP call",
+   "rel": "A",
+   "file": "cards/20-02.html"
   }
  ]
 }
