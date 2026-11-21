@@ -47,6 +47,10 @@
   {
    "id": "rivercard",
    "name": "Карта ривера"
+  },
+  {
+   "id": "4bp",
+   "name": "4BP"
   }
  ],
  "cards": [
@@ -526,6 +530,42 @@
    "who": "BTN open → BB call",
    "rel": "B",
    "file": "cards/13-02.html"
+  },
+  {
+   "id": "14-01",
+   "group": "4bp",
+   "title": "4-bettor checks flop → probe turn",
+   "name": "V14_01 · 4BP проба после чека 4-беттора",
+   "who": "Blind 3bet → BTN/CO 4bet → call",
+   "rel": "B",
+   "file": "cards/14-01.html"
+  },
+  {
+   "id": "14-02",
+   "group": "4bp",
+   "title": "4-bettor bets, checks, bets river",
+   "name": "V14_02 · 4BP ставка-чек-ставка 4-беттора · колл",
+   "who": "Blind 3bet → BTN/CO 4bet → call",
+   "rel": "B",
+   "file": "cards/14-02.html"
+  },
+  {
+   "id": "14-03",
+   "group": "4bp",
+   "title": "4BP c-bet: small sizes get called",
+   "name": "V14_03 · 4BP контбет 4-беттора",
+   "who": "Blind 3bet → BTN/CO 4bet → call",
+   "rel": "A",
+   "file": "cards/14-03.html"
+  },
+  {
+   "id": "14-04",
+   "group": "4bp",
+   "title": "4BP: barrel turn after small c-bet",
+   "name": "V14_04 · 4BP второй баррель 4-беттора",
+   "who": "Blind 3bet → BTN/CO 4bet → call",
+   "rel": "A",
+   "file": "cards/14-04.html"
   }
  ]
 }
