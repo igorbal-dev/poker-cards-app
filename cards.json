@@ -508,6 +508,24 @@
    "who": "Blind 3bet → IP call",
    "rel": "B",
    "file": "cards/12-02.html"
+  },
+  {
+   "id": "13-01",
+   "group": "callriver",
+   "title": "BB probes turn, bets river: call?",
+   "name": "V13_01 · BB проба и ставка ривера · колл BU по доскам",
+   "who": "BTN open → BB call",
+   "rel": "B",
+   "file": "cards/13-01.html"
+  },
+  {
+   "id": "13-02",
+   "group": "callriver",
+   "title": "BB leads river after turn x-x: call?",
+   "name": "V13_02 · BB лид ривера после чек-чека тёрна · колл BU по доскам",
+   "who": "BTN open → BB call",
+   "rel": "B",
+   "file": "cards/13-02.html"
   }
  ]
 }
