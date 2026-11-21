@@ -23,6 +23,10 @@
   {
    "id": "compare",
    "name": "Сравнение линий"
+  },
+  {
+   "id": "3bp",
+   "name": "3BP"
   }
  ],
  "cards": [
@@ -214,6 +218,78 @@
    "who": "BTN open → BB call",
    "rel": "B",
    "file": "cards/6-07.html"
+  },
+  {
+   "id": "7-01",
+   "group": "3bp",
+   "title": "3BP c-bet: fold by board",
+   "name": "V7_01 · 3BP контбет · по доскам",
+   "who": "Blind 3bet → IP call",
+   "rel": "A",
+   "file": "cards/7-01.html"
+  },
+  {
+   "id": "7-02",
+   "group": "3bp",
+   "title": "Turn barrel after 33% c-bet",
+   "name": "V7_02 · 3BP второй баррель после контбета 33%",
+   "who": "Blind 3bet → IP call",
+   "rel": "A",
+   "file": "cards/7-02.html"
+  },
+  {
+   "id": "7-02b",
+   "group": "3bp",
+   "title": "Barrel after 50–75% c-bet",
+   "name": "V7_02b · 3BP второй баррель после контбета 50–75%",
+   "who": "Blind 3bet → IP call",
+   "rel": "B",
+   "file": "cards/7-02b.html"
+  },
+  {
+   "id": "7-03",
+   "group": "3bp",
+   "title": "Flop checked → bet turn",
+   "name": "V7_03 · 3BP отложенный контбет · по доскам",
+   "who": "Blind 3bet → IP call",
+   "rel": "A",
+   "file": "cards/7-03.html"
+  },
+  {
+   "id": "7-04",
+   "group": "3bp",
+   "title": "Bet, check → bet river",
+   "name": "V7_04 · 3BP ставка-чек-ставка · ривер",
+   "who": "Blind 3bet → IP call",
+   "rel": "B",
+   "file": "cards/7-04.html"
+  },
+  {
+   "id": "7-05",
+   "group": "3bp",
+   "title": "Two checks → bet river",
+   "name": "V7_05 · 3BP два чека · ставка ривера",
+   "who": "Blind 3bet → IP call",
+   "rel": "B",
+   "file": "cards/7-05.html"
+  },
+  {
+   "id": "7-06",
+   "group": "3bp",
+   "title": "Air: 75% once vs 33% + river",
+   "name": "V7_06 · 3BP воздух: 75% разово или 33% + ривер",
+   "who": "Blind 3bet → IP call",
+   "rel": "B",
+   "file": "cards/7-06.html"
+  },
+  {
+   "id": "7-07",
+   "group": "3bp",
+   "title": "Call 3 barrels by board",
+   "name": "V7_07 · 3BP три барреля 3-беттора · колл",
+   "who": "Blind 3bet → IP call",
+   "rel": "B",
+   "file": "cards/7-07.html"
   }
  ]
 }
