@@ -67,6 +67,7 @@ CARD_GROUPS = {
     "17-01": "callriver", "17-02": "callriver", "17-03": "callriver", "17-04": "callriver",
     "17-05": "overfold", "17-06": "overfold",
     "18-01": "rivercard", "18-02": "rivercard", "18-03": "callriver",
+    "19-01": "compare",
 }
 
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",

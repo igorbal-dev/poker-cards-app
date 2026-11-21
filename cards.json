@@ -727,6 +727,15 @@
    "who": "SB open → BB call",
    "rel": "B",
    "file": "cards/18-03.html"
+  },
+  {
+   "id": "19-01",
+   "group": "compare",
+   "title": "River bluff vs BTN: which flop?",
+   "name": "V19_01 · блеф BB на ривере против BU: на каких флопах",
+   "who": "BTN open → BB call",
+   "rel": "A",
+   "file": "cards/19-01.html"
   }
  ]
 }
