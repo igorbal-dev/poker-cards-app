@@ -745,6 +745,15 @@
    "who": "BTN open → BB call",
    "rel": "B",
    "file": "cards/19-02.html"
+  },
+  {
+   "id": "20-01",
+   "group": "callriver",
+   "title": "Opener bets river: call by his seat",
+   "name": "V20_01 · ривер оупенера: колл по его позиции",
+   "who": "Open → BB call",
+   "rel": "A",
+   "file": "cards/20-01.html"
   }
  ]
 }
