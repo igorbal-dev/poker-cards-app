@@ -35,6 +35,10 @@
   {
    "id": "bvb_bb",
    "name": "BvB: за BB"
+  },
+  {
+   "id": "fish",
+   "name": "Против фиша"
   }
  ],
  "cards": [
@@ -379,6 +383,24 @@
    "who": "SB open → BB call",
    "rel": "B",
    "file": "cards/8-09.html"
+  },
+  {
+   "id": "9-01",
+   "group": "fish",
+   "title": "Fish calls your 3-bet: where he folds",
+   "name": "V9_01 · 3BP фиш-коллер · где фолдит",
+   "who": "Blind 3bet → fish IP call",
+   "rel": "B",
+   "file": "cards/9-01.html"
+  },
+  {
+   "id": "9-02",
+   "group": "fish",
+   "title": "Fish 3-bettor: where he folds",
+   "name": "V9_02 · 3BP фиш-3беттор · где фолдит",
+   "who": "Fish blind 3bet → you call IP",
+   "rel": "B",
+   "file": "cards/9-02.html"
   }
  ]
 }
