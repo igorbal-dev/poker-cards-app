@@ -490,6 +490,15 @@
    "who": "BTN open → BB call",
    "rel": "A",
    "file": "cards/11-05.html"
+  },
+  {
+   "id": "12-01",
+   "group": "riverraise",
+   "title": "BTN bets river: raise-bluff?",
+   "name": "V12_01 · рейз-блеф BB на ривере против ставки BU · по линии BU",
+   "who": "BTN open → BB call",
+   "rel": "B",
+   "file": "cards/12-01.html"
   }
  ]
 }

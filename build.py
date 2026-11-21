@@ -56,6 +56,7 @@ CARD_GROUPS = {
     "10-01": "3bp", "10-02": "3bp", "10-03": "3bp", "10-04": "3bp",
     "11-01": "turncard", "11-02": "turncard",
     "11-03": "rivercard", "11-04": "rivercard", "11-05": "rivercard",
+    "12-01": "riverraise",
 }
 
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",
