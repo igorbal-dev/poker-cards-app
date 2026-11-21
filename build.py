@@ -39,6 +39,7 @@ DEFAULT_GROUPS = [
     {"id": "bvb_sb", "name": "BvB: за SB"},
     {"id": "bvb_bb", "name": "BvB: за BB"},
     {"id": "fish", "name": "Против фиша"},
+    {"id": "turncard", "name": "Карта тёрна"},
 ]
 # группы для новых карточек (если у карточки ещё нет группы в cards.json)
 CARD_GROUPS = {
@@ -52,6 +53,7 @@ CARD_GROUPS = {
     "8-05": "bvb_bb", "8-06": "bvb_bb", "8-07": "bvb_bb", "8-08": "bvb_bb", "8-09": "bvb_bb",
     "9-01": "fish", "9-02": "fish",
     "10-01": "3bp", "10-02": "3bp", "10-03": "3bp", "10-04": "3bp",
+    "11-01": "turncard", "11-02": "turncard",
 }
 
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",

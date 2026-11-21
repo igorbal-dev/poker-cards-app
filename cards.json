@@ -39,6 +39,10 @@
   {
    "id": "fish",
    "name": "Против фиша"
+  },
+  {
+   "id": "turncard",
+   "name": "Карта тёрна"
   }
  ],
  "cards": [
@@ -437,6 +441,24 @@
    "who": "Open → IP 3bet → call",
    "rel": "B",
    "file": "cards/10-04.html"
+  },
+  {
+   "id": "11-01",
+   "group": "turncard",
+   "title": "BB probe turn: by turn card",
+   "name": "V11_01 · проба BB по карте тёрна",
+   "who": "BTN open → BB call",
+   "rel": "A",
+   "file": "cards/11-01.html"
+  },
+  {
+   "id": "11-02",
+   "group": "turncard",
+   "title": "BTN delayed c-bet: by turn card",
+   "name": "V11_02 · отложенный контбет BU по карте тёрна",
+   "who": "BTN open → BB call",
+   "rel": "A",
+   "file": "cards/11-02.html"
   }
  ]
 }
