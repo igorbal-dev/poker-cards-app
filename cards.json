@@ -646,6 +646,60 @@
    "who": "BTN open → BB call",
    "rel": "B",
    "file": "cards/16-03.html"
+  },
+  {
+   "id": "17-01",
+   "group": "callriver",
+   "title": "Opener leads river after turn x-x",
+   "name": "V17_01 · 3BP: оупенер лидит ривер после чек-чека тёрна · колл 3-беттора",
+   "who": "Open → IP 3bet → call",
+   "rel": "B",
+   "file": "cards/17-01.html"
+  },
+  {
+   "id": "17-02",
+   "group": "callriver",
+   "title": "Opener probes turn, bets river",
+   "name": "V17_02 · 3BP: проба оупенера и ставка ривера · колл 3-беттора",
+   "who": "Open → IP 3bet → call",
+   "rel": "B",
+   "file": "cards/17-02.html"
+  },
+  {
+   "id": "17-03",
+   "group": "callriver",
+   "title": "Caller bets turn & river: call",
+   "name": "V17_03 · 3BP блайнды: ставка коллера на тёрне и ривере · колл 3-беттора",
+   "who": "Blind 3bet → IP call",
+   "rel": "B",
+   "file": "cards/17-03.html"
+  },
+  {
+   "id": "17-04",
+   "group": "callriver",
+   "title": "BB bets turn & river: call",
+   "name": "V17_04 · BvB: BB ставит тёрн и ривер после чека SB · колл SB",
+   "who": "SB open → BB call",
+   "rel": "B",
+   "file": "cards/17-04.html"
+  },
+  {
+   "id": "17-05",
+   "group": "overfold",
+   "title": "SB: flop & turn checked → bet river",
+   "name": "V17_05 · BvB: два чека · ставка SB на ривере",
+   "who": "SB open → BB call",
+   "rel": "A",
+   "file": "cards/17-05.html"
+  },
+  {
+   "id": "17-06",
+   "group": "overfold",
+   "title": "BTN: BB checks 3 streets → bet river",
+   "name": "V17_06 · SRP: три чека BB · ставка BU на ривере",
+   "who": "BTN open → BB call",
+   "rel": "A",
+   "file": "cards/17-06.html"
   }
  ]
 }
