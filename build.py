@@ -36,6 +36,8 @@ DEFAULT_GROUPS = [
     {"id": "riverraise", "name": "Рейз ривера"},
     {"id": "compare", "name": "Сравнение линий"},
     {"id": "3bp", "name": "3BP"},
+    {"id": "bvb_sb", "name": "BvB: за SB"},
+    {"id": "bvb_bb", "name": "BvB: за BB"},
 ]
 # группы для новых карточек (если у карточки ещё нет группы в cards.json)
 CARD_GROUPS = {
@@ -45,6 +47,8 @@ CARD_GROUPS = {
     "6-07": "compare",
     "7-01": "3bp", "7-02": "3bp", "7-02b": "3bp", "7-03": "3bp",
     "7-04": "3bp", "7-05": "3bp", "7-06": "3bp", "7-07": "3bp",
+    "8-01": "bvb_sb", "8-02": "bvb_sb", "8-03": "bvb_sb", "8-04": "bvb_sb",
+    "8-05": "bvb_bb", "8-06": "bvb_bb", "8-07": "bvb_bb", "8-08": "bvb_bb", "8-09": "bvb_bb",
 }
 
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",

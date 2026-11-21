@@ -27,6 +27,14 @@
   {
    "id": "3bp",
    "name": "3BP"
+  },
+  {
+   "id": "bvb_sb",
+   "name": "BvB: за SB"
+  },
+  {
+   "id": "bvb_bb",
+   "name": "BvB: за BB"
   }
  ],
  "cards": [
@@ -290,6 +298,87 @@
    "who": "Blind 3bet → IP call",
    "rel": "B",
    "file": "cards/7-07.html"
+  },
+  {
+   "id": "8-01",
+   "group": "bvb_sb",
+   "title": "SB c-bet vs BB: fold by board",
+   "name": "V8_01 · BvB: контбет SB · по доскам",
+   "who": "SB open → BB call",
+   "rel": "A",
+   "file": "cards/8-01.html"
+  },
+  {
+   "id": "8-02",
+   "group": "bvb_sb",
+   "title": "SB: flop checked → bet turn",
+   "name": "V8_02 · BvB: SB отложенный контбет · по доскам",
+   "who": "SB open → BB call",
+   "rel": "A",
+   "file": "cards/8-02.html"
+  },
+  {
+   "id": "8-03",
+   "group": "bvb_sb",
+   "title": "SB: bet, check → bet river",
+   "name": "V8_03 · BvB: SB ставка-чек-ставка · ривер",
+   "who": "SB open → BB call",
+   "rel": "A",
+   "file": "cards/8-03.html"
+  },
+  {
+   "id": "8-04",
+   "group": "bvb_sb",
+   "title": "BB bets river: call or fold?",
+   "name": "V8_04 · BvB: BB ставит ривер после чеков · колл SB",
+   "who": "SB open → BB call",
+   "rel": "B",
+   "file": "cards/8-04.html"
+  },
+  {
+   "id": "8-05",
+   "group": "bvb_bb",
+   "title": "BB: SB checks twice → bet turn",
+   "name": "V8_05 · BvB: SB чек-чек · ставка BB на тёрне",
+   "who": "SB open → BB call",
+   "rel": "A",
+   "file": "cards/8-05.html"
+  },
+  {
+   "id": "8-06",
+   "group": "bvb_bb",
+   "title": "SB c-bets, then checks twice",
+   "name": "V8_06 · BvB: SB контбет и два чека · ставка BB на ривере",
+   "who": "SB open → BB call",
+   "rel": "A",
+   "file": "cards/8-06.html"
+  },
+  {
+   "id": "8-07",
+   "group": "bvb_bb",
+   "title": "BB: SB checks 3 times → bet river",
+   "name": "V8_07 · BvB: три чека SB · ставка BB на ривере",
+   "who": "SB open → BB call",
+   "rel": "A",
+   "file": "cards/8-07.html"
+  },
+  {
+   "id": "8-08",
+   "group": "bvb_bb",
+   "title": "SB bets 3 streets: call vs which sizes",
+   "name": "V8_08 · BvB: SB три барреля · колл BB по связкам",
+   "who": "SB open → BB call",
+   "rel": "B",
+   "file": "cards/8-08.html"
+  },
+  {
+   "id": "8-09",
+   "group": "bvb_bb",
+   "title": "SB checks flop, bets turn & river",
+   "name": "V8_09 · BvB: SB чек флопа, ставки тёрна и ривера · колл BB",
+   "who": "SB open → BB call",
+   "rel": "B",
+   "file": "cards/8-09.html"
   }
  ]
 }
