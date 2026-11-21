@@ -42,6 +42,7 @@ DEFAULT_GROUPS = [
     {"id": "turncard", "name": "Карта тёрна"},
     {"id": "rivercard", "name": "Карта ривера"},
     {"id": "4bp", "name": "4BP"},
+    {"id": "multi", "name": "Мультипоты"},
 ]
 # группы для новых карточек (если у карточки ещё нет группы в cards.json)
 CARD_GROUPS = {
@@ -60,6 +61,7 @@ CARD_GROUPS = {
     "12-01": "riverraise", "12-02": "riverraise",
     "13-01": "callriver", "13-02": "callriver",
     "14-01": "4bp", "14-02": "4bp", "14-03": "4bp", "14-04": "4bp",
+    "15-01": "multi", "15-02": "multi", "15-03": "multi", "15-04": "multi", "15-05": "multi",
 }
 
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",

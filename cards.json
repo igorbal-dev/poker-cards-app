@@ -51,6 +51,10 @@
   {
    "id": "4bp",
    "name": "4BP"
+  },
+  {
+   "id": "multi",
+   "name": "Мультипоты"
   }
  ],
  "cards": [
@@ -566,6 +570,51 @@
    "who": "Blind 3bet → BTN/CO 4bet → call",
    "rel": "A",
    "file": "cards/14-04.html"
+  },
+  {
+   "id": "15-01",
+   "group": "multi",
+   "title": "3-way: c-bet into two",
+   "name": "V15_01 · мультипот: контбет в двоих",
+   "who": "3-way pots: you raised pre",
+   "rel": "B",
+   "file": "cards/15-01.html"
+  },
+  {
+   "id": "15-02",
+   "group": "multi",
+   "title": "3-way: flop checked → bet turn",
+   "name": "V15_02 · мультипот: флоп прочекан, ставка рейзера на тёрне",
+   "who": "3-way pots: you raised pre",
+   "rel": "B",
+   "file": "cards/15-02.html"
+  },
+  {
+   "id": "15-03",
+   "group": "multi",
+   "title": "3-way: you called, flop checked → bet turn",
+   "name": "V15_03 · мультипот: проба коллера после трёх чеков",
+   "who": "3-way pots: you called pre",
+   "rel": "B",
+   "file": "cards/15-03.html"
+  },
+  {
+   "id": "15-04",
+   "group": "multi",
+   "title": "Limped pot 3-way: bet flop",
+   "name": "V15_04 · лимп-пот на троих: ставка флопа",
+   "who": "3-way limped pots",
+   "rel": "B",
+   "file": "cards/15-04.html"
+  },
+  {
+   "id": "15-05",
+   "group": "multi",
+   "title": "Limped pot 3-way: checks → bet turn",
+   "name": "V15_05 · лимп-пот на троих: флоп прочекан, ставка тёрна",
+   "who": "3-way limped pots",
+   "rel": "B",
+   "file": "cards/15-05.html"
   }
  ]
 }
