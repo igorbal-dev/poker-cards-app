@@ -55,6 +55,10 @@
   {
    "id": "multi",
    "name": "Мультипоты"
+  },
+  {
+   "id": "xraise",
+   "name": "После чек-рейза"
   }
  ],
  "cards": [
@@ -615,6 +619,33 @@
    "who": "3-way limped pots",
    "rel": "B",
    "file": "cards/15-05.html"
+  },
+  {
+   "id": "16-01",
+   "group": "xraise",
+   "title": "Check-raise called → barrel turn?",
+   "name": "V16_01 · чек-рейз заколлирован · баррель тёрна по карте",
+   "who": "BTN open → BB call",
+   "rel": "A",
+   "file": "cards/16-01.html"
+  },
+  {
+   "id": "16-02",
+   "group": "xraise",
+   "title": "XR and turn called → bet river?",
+   "name": "V16_02 · чек-рейз и баррель заколлированы · ривер по карте",
+   "who": "BTN open → BB call",
+   "rel": "B",
+   "file": "cards/16-02.html"
+  },
+  {
+   "id": "16-03",
+   "group": "xraise",
+   "title": "XR called, turn x-x → bet river?",
+   "name": "V16_03 · чек-рейз заколлирован, тёрн чек-чек · ривер по карте",
+   "who": "BTN open → BB call",
+   "rel": "B",
+   "file": "cards/16-03.html"
   }
  ]
 }
