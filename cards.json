@@ -718,6 +718,15 @@
    "who": "BTN open → BB call",
    "rel": "B",
    "file": "cards/18-02.html"
+  },
+  {
+   "id": "18-03",
+   "group": "callriver",
+   "title": "BB probes turn, bets river: call",
+   "name": "V18_03 · BvB: проба BB и ставка ривера · колл SB по доскам",
+   "who": "SB open → BB call",
+   "rel": "B",
+   "file": "cards/18-03.html"
   }
  ]
 }
