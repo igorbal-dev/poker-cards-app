@@ -499,6 +499,15 @@
    "who": "BTN open → BB call",
    "rel": "B",
    "file": "cards/12-01.html"
+  },
+  {
+   "id": "12-02",
+   "group": "riverraise",
+   "title": "3BP: raise 3-bettor's river?",
+   "name": "V12_02 · 3BP рейз-блеф ривера против 3-беттора · по его линии",
+   "who": "Blind 3bet → IP call",
+   "rel": "B",
+   "file": "cards/12-02.html"
   }
  ]
 }
