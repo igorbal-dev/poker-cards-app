@@ -736,6 +736,15 @@
    "who": "BTN open → BB call",
    "rel": "A",
    "file": "cards/19-01.html"
+  },
+  {
+   "id": "19-02",
+   "group": "callriver",
+   "title": "BTN checks flop, bets turn & river",
+   "name": "V19_02 · BU чек флопа, ставки тёрна и ривера · колл BB по доскам",
+   "who": "BTN open → BB call",
+   "rel": "B",
+   "file": "cards/19-02.html"
   }
  ]
 }
