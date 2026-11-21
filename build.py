@@ -51,6 +51,7 @@ CARD_GROUPS = {
     "8-01": "bvb_sb", "8-02": "bvb_sb", "8-03": "bvb_sb", "8-04": "bvb_sb",
     "8-05": "bvb_bb", "8-06": "bvb_bb", "8-07": "bvb_bb", "8-08": "bvb_bb", "8-09": "bvb_bb",
     "9-01": "fish", "9-02": "fish",
+    "10-01": "3bp", "10-02": "3bp", "10-03": "3bp", "10-04": "3bp",
 }
 
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",
@@ -182,7 +183,10 @@ def main(argv):
         }
         print(f"{path.name} -> {out.relative_to(ROOT).as_posix()}  [{by_id[cid]['group']}, {meta['rel']}] {meta['title']}")
 
-    data["cards"] = [by_id[k] for k in sorted(by_id)]
+    def sort_key(cid):  # 01–13, затем серии 6-xx, 7-xx … 10-xx по числу
+        m = re.match(r"(?:(\d+)-)?(\d+)([a-z]?)$", cid)
+        return (int(m.group(1) or 0), int(m.group(2)), m.group(3)) if m else (99, 0, cid)
+    data["cards"] = [by_id[k] for k in sorted(by_id, key=sort_key)]
     # группы без карточек в колоде не показываем
     used = {c["group"] for c in data["cards"]}
     data["groups"] = [g for g in data["groups"] if g["id"] in used]

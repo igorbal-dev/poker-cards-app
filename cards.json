@@ -401,6 +401,42 @@
    "who": "Fish blind 3bet → you call IP",
    "rel": "B",
    "file": "cards/9-02.html"
+  },
+  {
+   "id": "10-01",
+   "group": "3bp",
+   "title": "IP 3-bettor checks flop → probe turn",
+   "name": "V10_01 · 3BP проба против 3-беттора в позиции",
+   "who": "Open → IP 3bet → call",
+   "rel": "B",
+   "file": "cards/10-01.html"
+  },
+  {
+   "id": "10-02",
+   "group": "3bp",
+   "title": "IP 3-bettor c-bet: fold by board",
+   "name": "V10_02 · 3BP контбет 3-беттора в позиции",
+   "who": "Open → IP 3bet → call",
+   "rel": "B",
+   "file": "cards/10-02.html"
+  },
+  {
+   "id": "10-03",
+   "group": "3bp",
+   "title": "IP 3-bettor bets 3 streets: call?",
+   "name": "V10_03 · 3BP три барреля 3-беттора в позиции · колл",
+   "who": "Open → IP 3bet → call",
+   "rel": "B",
+   "file": "cards/10-03.html"
+  },
+  {
+   "id": "10-04",
+   "group": "3bp",
+   "title": "IP 3-bettor: bet, check, bet → call?",
+   "name": "V10_04 · 3BP ставка-чек-ставка 3-беттора в позиции · колл",
+   "who": "Open → IP 3bet → call",
+   "rel": "B",
+   "file": "cards/10-04.html"
   }
  ]
 }

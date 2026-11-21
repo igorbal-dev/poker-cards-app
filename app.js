@@ -414,7 +414,9 @@
     try {
       const data = await fetch('cards.json', { cache: 'no-cache' }).then((r) => r.json());
       groups = data.groups || [];
-      cards = (data.cards || data).slice().sort((a, b) => a.id.localeCompare(b.id));
+      // порядок: сначала 01–13, затем серии 6-xx, 7-xx … 10-xx (числовой, не строковый)
+      const ck = (id) => { const m = /^(?:(\d+)-)?(\d+)([a-z]?)$/.exec(id) || []; return [m[1] ? +m[1] : 0, +m[2] || 0, m[3] || '']; };
+      cards = (data.cards || data).slice().sort((a, b) => { const x = ck(a.id), y = ck(b.id); return x[0] - y[0] || x[1] - y[1] || x[2].localeCompare(y[2]); });
     } catch (e) {
       $('main').innerHTML = '<div class="empty">Не удалось загрузить cards.json.</div>';
       return;
