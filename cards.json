@@ -700,6 +700,24 @@
    "who": "BTN open → BB call",
    "rel": "A",
    "file": "cards/17-06.html"
+  },
+  {
+   "id": "18-01",
+   "group": "rivercard",
+   "title": "BTN bet–x–bet: by river card",
+   "name": "V18_01 · BU ставка-чек-ставка · колл BB по карте ривера",
+   "who": "BTN open → BB call",
+   "rel": "B",
+   "file": "cards/18-01.html"
+  },
+  {
+   "id": "18-02",
+   "group": "rivercard",
+   "title": "BTN 3 barrels: by river card",
+   "name": "V18_02 · BU три барреля · колл BB по карте ривера",
+   "who": "BTN open → BB call",
+   "rel": "B",
+   "file": "cards/18-02.html"
   }
  ]
 }
