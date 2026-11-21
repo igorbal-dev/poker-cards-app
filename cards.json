@@ -43,6 +43,10 @@
   {
    "id": "turncard",
    "name": "Карта тёрна"
+  },
+  {
+   "id": "rivercard",
+   "name": "Карта ривера"
   }
  ],
  "cards": [
@@ -459,6 +463,33 @@
    "who": "BTN open → BB call",
    "rel": "A",
    "file": "cards/11-02.html"
+  },
+  {
+   "id": "11-03",
+   "group": "rivercard",
+   "title": "BTN checked twice → bet river",
+   "name": "V11_03 · BU прочекал дважды · ставка BB на ривере по карте",
+   "who": "BTN open → BB call",
+   "rel": "A",
+   "file": "cards/11-03.html"
+  },
+  {
+   "id": "11-04",
+   "group": "rivercard",
+   "title": "BTN bet-check → bet river",
+   "name": "V11_04 · BU ставка-чек · ставка BB на ривере по карте",
+   "who": "BTN open → BB call",
+   "rel": "A",
+   "file": "cards/11-04.html"
+  },
+  {
+   "id": "11-05",
+   "group": "rivercard",
+   "title": "C-bet, turn x-x → bet river",
+   "name": "V11_05 · контбет, тёрн чек-чек · ставка BU на ривере по карте",
+   "who": "BTN open → BB call",
+   "rel": "A",
+   "file": "cards/11-05.html"
   }
  ]
 }
