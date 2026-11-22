@@ -781,6 +781,15 @@
    "who": "Open → blind call",
    "rel": "B",
    "file": "cards/20-04.html"
+  },
+  {
+   "id": "20-05",
+   "group": "callriver",
+   "title": "IP caller bets river: call 2nd pair?",
+   "name": "V20_05 · SRP оупенер без позиции: ставка коллера на ривере · колл второй парой",
+   "who": "HJ/LJ/CO open → IP call",
+   "rel": "B",
+   "file": "cards/20-05.html"
   }
  ]
 }
