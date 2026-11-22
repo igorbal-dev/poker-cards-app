@@ -790,6 +790,15 @@
    "who": "HJ/LJ/CO open → IP call",
    "rel": "B",
    "file": "cards/20-05.html"
+  },
+  {
+   "id": "20-06",
+   "group": "overfold",
+   "title": "SB checks 3 streets → bet river",
+   "name": "V20_06 · SRP: SB прочекал три улицы · ставка ривера в позиции",
+   "who": "BTN/CO/HJ/LJ open → SB call",
+   "rel": "A",
+   "file": "cards/20-06.html"
   }
  ]
 }
