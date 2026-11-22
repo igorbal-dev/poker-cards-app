@@ -763,6 +763,15 @@
    "who": "HJ/LJ/CO open → IP call",
    "rel": "A",
    "file": "cards/20-02.html"
+  },
+  {
+   "id": "20-03",
+   "group": "overfold",
+   "title": "OOP opener: x-x twice → bet river",
+   "name": "V20_03 · SRP оупенер без позиции: флоп и тёрн прочеканы → ставка ривера",
+   "who": "HJ/LJ/CO open → IP call",
+   "rel": "A",
+   "file": "cards/20-03.html"
   }
  ]
 }
