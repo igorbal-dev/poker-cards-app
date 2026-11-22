@@ -772,6 +772,15 @@
    "who": "HJ/LJ/CO open → IP call",
    "rel": "A",
    "file": "cards/20-03.html"
+  },
+  {
+   "id": "20-04",
+   "group": "callriver",
+   "title": "Blind calls twice, donks river",
+   "name": "V20_04 · SRP: донк ривера блайнда после двух коллов · колл топ-парой",
+   "who": "Open → blind call",
+   "rel": "B",
+   "file": "cards/20-04.html"
   }
  ]
 }
