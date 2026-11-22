@@ -808,6 +808,15 @@
    "who": "You bet river, OOP check-raises",
    "rel": "B",
    "file": "cards/20-07.html"
+  },
+  {
+   "id": "20-08",
+   "group": "3bp",
+   "title": "3BP: 3-bettor bets twice, checks river",
+   "name": "V20_08 · 3BP: 3-беттор поставил флоп и тёрн, чек ривера · ставка коллера",
+   "who": "Blind 3bet → you call IP",
+   "rel": "A",
+   "file": "cards/20-08.html"
   }
  ]
 }
