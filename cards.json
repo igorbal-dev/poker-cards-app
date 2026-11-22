@@ -799,6 +799,15 @@
    "who": "BTN/CO/HJ/LJ open → SB call",
    "rel": "A",
    "file": "cards/20-06.html"
+  },
+  {
+   "id": "20-07",
+   "group": "riverraise",
+   "title": "Check-raise river after checked turn",
+   "name": "V20_07 · Чек-рейз ривера после прочеканного тёрна · колл",
+   "who": "You bet river, OOP check-raises",
+   "rel": "B",
+   "file": "cards/20-07.html"
   }
  ]
 }
