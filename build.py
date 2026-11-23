@@ -68,7 +68,7 @@ CARD_GROUPS = {
     "17-05": "overfold", "17-06": "overfold",
     "18-01": "rivercard", "18-02": "rivercard", "18-03": "callriver",
     "19-01": "compare", "19-02": "callriver",
-    "20-01": "callriver", "20-02": "overfold", "20-03": "overfold", "20-04": "callriver", "20-05": "callriver", "20-06": "overfold", "20-07": "riverraise", "20-08": "3bp",
+    "20-01": "callriver", "20-02": "overfold", "20-03": "overfold", "20-04": "callriver", "20-05": "callriver", "20-06": "overfold", "20-07": "riverraise", "20-08": "3bp", "20-09": "multi",
 }
 
 VOID = {"area", "base", "br", "col", "embed", "hr", "img", "input", "link",

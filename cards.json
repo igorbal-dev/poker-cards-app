@@ -817,6 +817,15 @@
    "who": "Blind 3bet → you call IP",
    "rel": "A",
    "file": "cards/20-08.html"
+  },
+  {
+   "id": "20-09",
+   "group": "multi",
+   "title": "3-way pot: raiser bets river",
+   "name": "V20_09 · Мультипот на троих: колл ривера рейзера",
+   "who": "3-way pot: raiser bets river",
+   "rel": "B",
+   "file": "cards/20-09.html"
   }
  ]
 }
