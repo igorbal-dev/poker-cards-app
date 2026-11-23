@@ -1,6 +1,6 @@
 // Service worker: офлайн-кэш приложения и карточек.
 // При изменении оболочки приложения увеличьте VERSION.
-const VERSION = 'v48';
+const VERSION = 'v49';
 const CACHE = 'poker-cards-' + VERSION;
 const SHELL = [
   './', 'index.html', 'app.css', 'app.js', 'manifest.json', 'cards.json',

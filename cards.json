@@ -826,6 +826,15 @@
    "who": "3-way pot: raiser bets river",
    "rel": "B",
    "file": "cards/20-09.html"
+  },
+  {
+   "id": "20-10",
+   "group": "fish",
+   "title": "Fish bets 3 streets: call",
+   "name": "V20_10 · Три барреля фиша: колл топ-парой",
+   "who": "Fish bets 3 streets",
+   "rel": "B",
+   "file": "cards/20-10.html"
   }
  ]
 }
