@@ -835,6 +835,15 @@
    "who": "Fish bets 3 streets",
    "rel": "B",
    "file": "cards/20-10.html"
+  },
+  {
+   "id": "20-11",
+   "group": "multi",
+   "title": "3-way limped pot: river bet = value",
+   "name": "V20_11 · Лимп-пот на троих: ставка ривера = вэлью",
+   "who": "3-way limped pot",
+   "rel": "B",
+   "file": "cards/20-11.html"
   }
  ]
 }
